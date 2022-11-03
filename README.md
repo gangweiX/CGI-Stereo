@@ -1,4 +1,4 @@
-# ICG-Stereo
+# CGI-Stereo
 
 The source code is coming soon.
 
@@ -13,8 +13,8 @@ The source code is coming soon.
 ### Create a virtual environment and activate it.
 
 ```
-conda create -n ICG python=3.8
-conda activate ICG
+conda create -n CGI python=3.8
+conda activate CGI
 ```
 ### Dependencies
 
