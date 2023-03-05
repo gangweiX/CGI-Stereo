@@ -6,8 +6,13 @@ Geometry Interaction</h1>
   </p>
   <h3 align="center"><a href="https://arxiv.org/pdf/2301.02789.pdf">Paper</a>
   <div align="center"></div>
-
 </p>
+<p align="center">
+  <a href="">
+    <img src="https://github.com/gangweiX/CGI-Stereo/blob/main/imgs/CGI-network.jpg" alt="Logo" width="100%">
+  </a>
+</p>
+
 
 # How to use
 
