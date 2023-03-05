@@ -42,3 +42,8 @@ pip install matplotlib
 pip install tqdm
 pip install timm==0.5.4
 ```
+#Evaluation on Scene Flow and KITTI
+
+### Pretrained Model
+[CGI-Stereo](https://drive.google.com/drive/folders/1sSZctBVYQzCpG_OPFTPIDonDRkWwca3t?usp=share_link)
+[CGF-ACV](https://drive.google.com/drive/folders/15pVddbGU6ByYWRWB_CFW2pzANU0mzdU5?usp=share_link)
