@@ -1,6 +1,13 @@
-# CGI-Stereo
+<p align="center">
+  <h1 align="center">CGI-Stereo: Accurate and Real-Time Stereo Matching via Context and
+Geometry Interaction</h1>
+  <p align="center">
+    Gangwei Xu, Huan Zhou, Xin Yang
+  </p>
+  <h3 align="center"><a href="https://arxiv.org/pdf/2301.02789.pdf">Paper</a>
+  <div align="center"></div>
 
-The source code is coming soon.
+</p>
 
 # How to use
 
