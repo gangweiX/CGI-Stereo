@@ -13,6 +13,9 @@ Geometry Interaction</h1>
   </a>
 </p>
 
+# Attention
+We will update training and evaluation details soon.
+
 
 # How to use
 
