@@ -13,9 +13,6 @@ Geometry Interaction</h1>
   </a>
 </p>
 
-# Attention
-We will update training and evaluation details soon.
-
 
 # How to use
 
@@ -42,7 +39,7 @@ pip install matplotlib
 pip install tqdm
 pip install timm==0.5.4
 ```
-#Evaluation on Scene Flow and KITTI
+# Evaluation on Scene Flow and KITTI
 
 ### Pretrained Model
 [CGI-Stereo](https://drive.google.com/drive/folders/1sSZctBVYQzCpG_OPFTPIDonDRkWwca3t?usp=share_link)
