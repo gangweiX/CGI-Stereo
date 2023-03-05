@@ -17,6 +17,7 @@ Geometry Interaction</h1>
 # How to use
 
 ## Environment
+* NVIDIA RTX 3090
 * Python 3.8
 * Pytorch 1.12
 
