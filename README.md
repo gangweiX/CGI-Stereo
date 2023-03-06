@@ -2,7 +2,7 @@
   <h1 align="center">CGI-Stereo: Accurate and Real-Time Stereo Matching via Context and
 Geometry Interaction</h1>
   <p align="center">
-    Gangwei Xu, Huan Zhou, Xin Yang
+    Gangwei Xu*, Huan Zhou*, Xin Yang
   </p>
   <h3 align="center"><a href="https://arxiv.org/pdf/2301.02789.pdf">Paper</a>
   <div align="center"></div>
@@ -74,12 +74,6 @@ python train_sceneflow.py
 Use the following command to train CGI-Stereo on KITTI (using pretrained model on Scene Flow),
 ```
 python train_kitti.py
-
-```
-
-## Generate disparity images of KITTI test set,
-```
-python save_disp.py
 ```
 
 
@@ -89,6 +83,11 @@ python save_disp.py
 ### Pretrained Model
 * [CGI-Stereo](https://drive.google.com/drive/folders/15pVddbGU6ByYWRWB_CFW2pzANU0mzdU5?usp=share_link)
 * [CGF-ACV](https://drive.google.com/drive/folders/1sSZctBVYQzCpG_OPFTPIDonDRkWwca3t?usp=share_link)
+
+Generate disparity images of KITTI test set,
+```
+python save_disp.py
+```
 
 # Citation
 
