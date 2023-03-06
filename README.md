@@ -68,7 +68,6 @@ pip install timm==0.5.4
 Use the following command to train CGI-Stereo on Scene Flow,
 ```
 python train_sceneflow.py
-
 ```
 
 Use the following command to train CGI-Stereo on KITTI (using pretrained model on Scene Flow),
