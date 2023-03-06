@@ -16,7 +16,8 @@ Geometry Interaction</h1>
 
 # SOTA results.
 The proposed CGF-ACV ranks the first on the KITTI 2012 and 2015 leaderboards among all the published methods. The proposed CGI-Stereo outperforms all other published real-time methods on KITTI benchmarks.
-![image](https://github.com/gangweiX/CGI-Stereo/blob/main/imgs/ranking.jpg)
+
+<p align="center"><img width=90% src="imgs/ranking.jpg"></p>
 
 
 # How to use
