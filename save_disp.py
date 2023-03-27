@@ -26,7 +26,7 @@ import cv2
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 parser = argparse.ArgumentParser(description='Accurate and Real-Time Stereo Matching via Context and Geometry Interaction (CGI-Stereo)')
-parser.add_argument('--model', default='acvnet', help='select a model structure', choices=__models__.keys())
+parser.add_argument('--model', default='CGI_Stereo', help='select a model structure', choices=__models__.keys())
 parser.add_argument('--maxdisp', type=int, default=192, help='maximum disparity')
 parser.add_argument('--dataset', default='kitti', help='dataset name', choices=__datasets__.keys())
 parser.add_argument('--datapath_12', default="/data/KITTI/KITTI_2012/", help='data path')
