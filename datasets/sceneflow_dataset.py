@@ -49,99 +49,37 @@ class SceneFlowDatset(Dataset):
         left_img = self.load_image(os.path.join(self.datapath, self.left_filenames[index]))
         right_img = self.load_image(os.path.join(self.datapath, self.right_filenames[index]))
         disparity = self.load_disp(os.path.join(self.datapath, self.disp_filenames[index]))
-        # left_img = self.RGB2GRAY(left_img)
-        # right_img = self.RGB2GRAY(right_img)
 
         if self.training:
 
             th, tw = 256, 512
-            #th, tw = 288, 512
             random_brightness = np.random.uniform(0.5, 2.0, 2)
             random_gamma = np.random.uniform(0.8, 1.2, 2)
             random_contrast = np.random.uniform(0.8, 1.2, 2)
             random_saturation = np.random.uniform(0, 1.4, 2)
-            # print("####1111", np.asarray(left_img).shape)
-            # plt.subplot(421)
-            # plt.imshow(np.asarray(left_img))
-
-            # plt.subplot(422)
-            # plt.imshow(np.asarray(right_img))
 
             left_img = torchvision.transforms.functional.adjust_brightness(left_img, random_brightness[0])
             right_img = torchvision.transforms.functional.adjust_brightness(right_img, random_brightness[1])
-            # plt.subplot(423)
-            # plt.imshow(np.asarray(left_img))
-
-            # plt.subplot(424)
-            # plt.imshow(np.asarray(right_img))
 
             left_img = torchvision.transforms.functional.adjust_gamma(left_img, random_gamma[0])
             right_img = torchvision.transforms.functional.adjust_gamma(right_img, random_gamma[1])
 
-            # plt.subplot(425)
-            # plt.imshow(np.asarray(left_img))
-
-            # plt.subplot(426)
-            # plt.imshow(np.asarray(right_img))
             left_img = torchvision.transforms.functional.adjust_contrast(left_img, random_contrast[0])
             right_img = torchvision.transforms.functional.adjust_contrast(right_img, random_contrast[1])
 
             left_img = torchvision.transforms.functional.adjust_saturation(left_img, random_saturation[0])
             right_img = torchvision.transforms.functional.adjust_saturation(right_img, random_saturation[1])
 
-            # plt.subplot(221)
-            # plt.imshow(np.asarray(left_img))
-
-            # plt.subplot(222)
-            # plt.imshow(np.asarray(right_img))
-            # plt.show()
-
-
             right_img = np.asarray(right_img)
             left_img = np.asarray(left_img)
-
-            
-            ####### Gaussian noise
-            # h, w, c = left_img.shape
-            # mean=0.
-            # variance = 0.05
-            # noise_left = np.random.normal(loc=mean, scale=variance, size=(h, w, c))
-            # noise_right = np.random.normal(loc=mean, scale=variance, size=(h, w, c))
-            # left_img = np.clip(left_img/255 + noise_left, 0., 1.) * 255
-            # right_img = np.clip(right_img/255 + noise_right, 0., 1.) * 255
-            # right_img = np.asarray(right_img, dtype='uint8')
-            # left_img = np.asarray(left_img, dtype='uint8')
-
-            # plt.subplot(223)
-            # plt.imshow(left_img)
-
-            # plt.subplot(224)
-            # plt.imshow(right_img)
-            # plt.show()
-
-            # w, h  = left_img.size
-            # th, tw = 256, 512
-            #
-            # x1 = random.randint(0, w - tw)
-            # y1 = random.randint(0, h - th)
-            #
-            # left_img = left_img.crop((x1, y1, x1 + tw, y1 + th))
-            # right_img = right_img.crop((x1, y1, x1 + tw, y1 + th))
-            # dataL = dataL[y1:y1 + th, x1:x1 + tw]
-            # right_img = np.asarray(right_img)
-            # left_img = np.asarray(left_img)
 
             # geometric unsymmetric-augmentation
             angle = 0;
             px = 0
             if np.random.binomial(1, 0.5):
-                # angle = 0.1;
-                # px = 2
                 angle = 0.05
                 px = 1
             co_transform = flow_transforms.Compose([
-                # flow_transforms.RandomVdisp(angle, px),
-                # flow_transforms.Scale(np.random.uniform(self.rand_scale[0], self.rand_scale[1]), order=self.order),
                 flow_transforms.RandomCrop((th, tw)),
             ])
             augmented, disparity = co_transform([left_img, right_img], disparity)
