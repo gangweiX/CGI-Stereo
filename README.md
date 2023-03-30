@@ -65,14 +65,20 @@ pip install timm==0.5.4
 
 ## Train
 
-Use the following command to train CGI-Stereo on Scene Flow,
+Use the following command to train CGI-Stereo on Scene Flow.
+First training,
 ```
-python train_sceneflow.py
+python train_sceneflow.py --logdir ./checkpoints/sceneflow/first/
+```
+Second training,
+```
+python train_sceneflow.py --logdir ./checkpoints/sceneflow/second/ --loadckpt ./checkpoints/sceneflow/first/checkpoint_000019.ckpt
 ```
 
 Use the following command to train CGI-Stereo on KITTI (using pretrained model on Scene Flow),
 ```
-python train_kitti.py
+python train_kitti.py --logdir ./checkpoints/kitti/ --loadckpt ./checkpoints/sceneflow/second/checkpoint_000019.ckpt
+```
 ```
 
 
