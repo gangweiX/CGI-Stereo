@@ -70,8 +70,8 @@ class SceneFlowDatset(Dataset):
             left_img = torchvision.transforms.functional.adjust_saturation(left_img, random_saturation[0])
             right_img = torchvision.transforms.functional.adjust_saturation(right_img, random_saturation[1])
 
-            right_img = np.asarray(right_img)
-            left_img = np.asarray(left_img)
+            right_img = np.array(right_img)
+            left_img = np.array(left_img)
 
             # geometric unsymmetric-augmentation
             angle = 0;
