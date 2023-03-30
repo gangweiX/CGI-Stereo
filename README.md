@@ -79,7 +79,7 @@ Use the following command to train CGI-Stereo on KITTI (using pretrained model o
 ```
 python train_kitti.py --logdir ./checkpoints/kitti/ --loadckpt ./checkpoints/sceneflow/second/checkpoint_000019.ckpt
 ```
-```
+
 
 
 
@@ -105,7 +105,6 @@ If you find this project helpful in your research, welcome to cite the paper.
   journal={arXiv preprint arXiv:2301.02789},
   year={2023}
 }
-
 ```
 
 # Acknowledgements
